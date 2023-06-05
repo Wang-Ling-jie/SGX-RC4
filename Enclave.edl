@@ -59,9 +59,9 @@ enclave {
         void ocall_print_string([in, string] const char *str);
     };
 
-    trusteod {
+    trusted {
         void ecall_sbox_generation();
         void ecall_keystream_generation();
-        void ecall_decryption([in, size=len] unsigned char* cyphertext, [in] unsigned char* plaintext, size_t len);
+        void ecall_decryption([in, size=len] unsigned char* ciphertext, [in] unsigned char* plaintext, size_t len);
     };
 };
